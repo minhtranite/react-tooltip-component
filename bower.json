@@ -1,0 +1,24 @@
+{
+  "name": "react-tooltip-component",
+  "version": "0.1.0",
+  "description": "React component.",
+  "main": "lib/index.js",
+  "keywords": [
+    "react-component",
+    "react",
+    "component",
+    "tooltip"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap-customize": "~3.3.4"
+  }
+}
