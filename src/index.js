@@ -1,3 +1,3 @@
-import Component from './Component.js';
+import Tooltip from './Tooltip.js';
 
-export default Component;
+export default Tooltip;
