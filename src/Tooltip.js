@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 class Tooltip extends React.Component {
   static propTypes = {
@@ -19,7 +20,7 @@ class Tooltip extends React.Component {
 
   componentDidMount = () => {
     this.container = this.props.container || document.body;
-    this.componentEl = React.findDOMNode(this);
+    this.componentEl = ReactDOM.findDOMNode(this);
     this.tooltipEl = document.createElement('div');
 
     let tooltipArrowEl = document.createElement('div');

@@ -15,7 +15,7 @@ npm install --save-dev react-tooltip-component
 #### Webpack
 
 ```js
-import('react-tooltip-component/lib/tooltip.css');
+import 'react-tooltip-component/lib/tooltip.css';
 //require('react-tooltip-component/lib/tooltip.css');
 ```
 
@@ -33,6 +33,17 @@ import Tooltip from 'react-tooltip-component';
 <Tooltip title='Tooltip on top' position='top'>
   <button className='btn btn-default'>Tooltip on top</button>
 </Tooltip>
+```
+
+### UMD
+
+```html
+<link rel="stylesheet" type="text/css" href="path/to/react-tooltip-component/dist/tooltip.css">
+<script src="path/to/react-tooltip-component/dist/react-tooltip-component.js"></script>
+```
+
+```js
+const Tooltip = window.ReactTooltipComponent;
 ```
 
 ## Props
