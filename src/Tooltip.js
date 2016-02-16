@@ -36,8 +36,8 @@ class Tooltip extends React.Component {
     this.container.appendChild(this.tooltipEl);
     this.resetTooltip();
 
-    this.componentEl.addEventListener('mousemove', this.handleMouseMove);
-    this.componentEl.addEventListener('mouseout', this.handleMouseOut);
+    this.componentEl.addEventListener(this.props.fixed ? 'mouseenter' : 'mousemove', this.handleMouseMove);
+    this.componentEl.addEventListener('mouseleave', this.handleMouseOut);
   };
 
   componentDidUpdate = () => {
@@ -47,8 +47,8 @@ class Tooltip extends React.Component {
 
 
   componentWillUnmount = () => {
-    this.componentEl.removeEventListener('mousemove', this.handleMouseMove);
-    this.componentEl.removeEventListener('mouseout', this.handleMouseOut);
+    this.componentEl.removeEventListener(this.props.fixed ? 'mouseenter' : 'mousemove', this.handleMouseMove);
+    this.componentEl.removeEventListener('mouseleave', this.handleMouseOut);
     this.container.removeChild(this.tooltipEl);
   };
 
@@ -109,13 +109,13 @@ class Tooltip extends React.Component {
           cOffsetY = componentHeight / 2;
           break;
       }
-      pointX = componentOffsetX + cOffsetX + window.scrollX;
-      pointY = componentOffsetY + cOffsetY + window.scrollY;
+      pointX = componentOffsetX + cOffsetX + (window.scrollX || window.pageXOffset);
+      pointY = componentOffsetY + cOffsetY + (window.scrollY || window.pageYOffset);
     } else {
       let clientX = e.clientX;
       let clientY = e.clientY;
-      pointX = clientX - containerOffsetX + window.scrollX;
-      pointY = clientY - containerOffsetY + window.scrollY;
+      pointX = clientX - containerOffsetX + (window.scrollX || window.pageXOffset);
+      pointY = clientY - containerOffsetY + (window.scrollY || window.pageYOffset);
     }
     return {
       x: pointX,

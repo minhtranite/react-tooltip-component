@@ -67,7 +67,7 @@ app.get('*', function (req, res) {
 
 var server = http.createServer(app);
 
-server.listen(port, host, function () {
+server.listen(port, function () {
   console.log('Listening at ' + serverUrl);
   opn(serverUrl);
 });
