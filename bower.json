@@ -1,8 +1,8 @@
 {
   "name": "react-tooltip-component",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "React component.",
-  "main": ["dist/react-tooltip-component.js", "dist/tooltip"],
+  "main": ["dist/react-tooltip-component.js", "dist/react-tooltip-component.css"],
   "keywords": [
     "react-component",
     "react",
@@ -18,7 +18,5 @@
     "tests"
   ],
   "dependencies": {},
-  "devDependencies": {
-    "bootstrap-customize": "~3.3.4"
-  }
+  "devDependencies": {}
 }
