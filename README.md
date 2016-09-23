@@ -58,4 +58,4 @@ const Tooltip = window.ReactTooltipComponent;
 
 ## Example
 
-View [demo](http://vn38minhtran.github.io/react-tooltip-component) or example folder.
+View [demo](http://minhtranite.github.io/react-tooltip-component) or example folder.
