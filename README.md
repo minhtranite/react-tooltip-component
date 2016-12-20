@@ -5,7 +5,7 @@ A simple tooltip component for ReactJS.
 ## Installation
 
 ```bash
-npm install --save-dev react-tooltip-component
+npm install --save react-tooltip-component
 ```
 
 ## Usage
