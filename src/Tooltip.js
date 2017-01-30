@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const canUseDOM = !!((typeof document !== 'undefined' && document && document.createElement));
+
 class Tooltip extends React.Component {
   static propTypes = {
     container: React.PropTypes.any,
@@ -12,14 +14,14 @@ class Tooltip extends React.Component {
   };
 
   static defaultProps = {
-    container: document.body,
+    container: (canUseDOM ? document.body : null),
     position: 'top',
     fixed: true,
     space: 5
   };
 
   componentDidMount = () => {
-    this.container = this.props.container || document.body;
+    this.container = this.props.container || (canUseDOM ? document.body : null);
     this.componentEl = ReactDOM.findDOMNode(this);
     this.tooltipEl = document.createElement('div');
 
