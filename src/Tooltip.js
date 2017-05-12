@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 
 class Tooltip extends React.Component {
   static propTypes = {
-    container: React.PropTypes.any,
-    children: React.PropTypes.node.isRequired,
-    title: React.PropTypes.string.isRequired,
-    position: React.PropTypes.oneOf(['left', 'top', 'right', 'bottom']),
-    fixed: React.PropTypes.bool,
-    space: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.number])
+    container: PropTypes.any,
+    children: PropTypes.node.isRequired,
+    title: PropTypes.string.isRequired,
+    position: PropTypes.oneOf(['left', 'top', 'right', 'bottom']),
+    fixed: PropTypes.bool,
+    space: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
   };
 
   static defaultProps = {
