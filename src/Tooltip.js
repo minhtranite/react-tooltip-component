@@ -40,9 +40,12 @@ class Tooltip extends React.Component {
     this.componentEl.addEventListener('mouseleave', this.handleMouseOut);
   };
 
-  componentDidUpdate = () => {
+  componentDidUpdate = (prevProps) => {
     this.tooltipEl.className = 'tooltip ' + this.props.position;
     this.tooltipEl.childNodes[1].textContent = this.props.title;
+    if (prevProps.title !== this.props.title) {
+      this.handleMouseMove();
+    }
   };
 
 
